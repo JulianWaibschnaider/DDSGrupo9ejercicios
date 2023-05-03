@@ -1,0 +1,19 @@
+.lblIngreso{
+    font-family:Poppins;
+    font-weight: 400;
+}
+
+.mb-5{
+    font-family:Poppins;
+    font-weight: 700;
+}
+
+.gradient-custom {
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+.btn-success{
+    background-color:#25BDE6 !important;; 
+}
