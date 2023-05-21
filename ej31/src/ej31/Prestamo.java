@@ -10,15 +10,15 @@ public class Prestamo {
 	private Libro libro;
 	private Lector lector;
 
-	public Integer CalcularDiasMulta() {
+	public Multa CalcularDiasMulta() {
 		int diasRetraso = ((this.fechaDevolucion.getDayOfYear() - this.fechaVencimiento.getDayOfYear()));
 		Multa multa = new Multa();
 		if (diasRetraso > 0) {
 			multa.setDiasMultado(diasRetraso * 2);
 			multa.setFechaMulta(fechaDevolucion);
-			return diasRetraso * 2;
+			return multa;
 		}
-		return 0;
+		return null;
 	}
 
 	public LocalDate getFechaRetiro() {

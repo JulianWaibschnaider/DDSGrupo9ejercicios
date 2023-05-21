@@ -14,17 +14,23 @@ public class Lector {
 		return prestamos.size() < 3;
 	}
 
-	public void AgregarDiasMultado() {
+	public void AgregarDiasMultado(int diasRestantes) {
 		Multa multa = new Multa();
 		int diasMulta;
 		for (Prestamo p : this.prestamos) {
-			diasMulta = p.CalcularDiasMulta();
-			if (diasMulta != 0) {
+			diasMulta = p.CalcularDiasMulta().getDiasMultado();
+			if(diasRestantes<diasMulta) {
 				multa.setDiasMultado(diasMulta);
 				multa.setFechaMulta(p.getFechaDevolucion());
 				multas.add(multa);
 			}
 		}
+	}
+
+	public Integer DiasMultaRestantes(Multa multa){
+		int diasRestantes;
+		diasRestantes = multa.ConsultarDiasRestantes();
+		return diasRestantes;
 	}
 
 	public void setHabilitado() {
@@ -47,5 +53,6 @@ public class Lector {
 		}
 
 	}
+
 
 }
